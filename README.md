@@ -14,7 +14,7 @@ The notifier is written in Python 3.
   - To install the requirements use:  
     ```pip3 install -r /path/to/requirements.txt```
 
-## Run the script
+## Runnig the script
 To run the script change the directory to repo and run the ```refresher.py```.  
 Lazy ? here you go!  
 ```python3 refresher.py```
