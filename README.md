@@ -9,4 +9,4 @@ The notifier is written in Python 3.
 
 - [Any version of Python3](https://www.python.org/downloads/)
 - Required dependencies can be found [here](https://github.com/GeekMuch/notifyGradeSTADS/blob/master/requirements.txt)
-    ```pip install -r /path/to/requirements.txt```
+    -```pip install -r /path/to/requirements.txt```
