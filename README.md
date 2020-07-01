@@ -11,4 +11,5 @@ The notifier is written in Python 3.
 - pip package management system
 - Required dependencies can be found [here](https://github.com/GeekMuch/notifyGradeSTADS/blob/master/requirements.txt)
   - To install the requirements use:
-    ```pip install -r /path/to/requirements.txt```
+    ```pip3 install -r /path/to/requirements.txt```
+
