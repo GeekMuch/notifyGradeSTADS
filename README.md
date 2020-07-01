@@ -1,4 +1,4 @@
-# Grade notifier 
+# STADS grade notifier 
 Notifies by playing a YouTube video when a new grade is added.
 
 ## Description
