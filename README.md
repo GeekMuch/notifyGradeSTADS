@@ -8,5 +8,7 @@ When a new graded is added to the list while the script is running, a YouTube vi
 The notifier is written in Python 3.
 
 - [Any version of Python3](https://www.python.org/downloads/)
+- pip package management system
 - Required dependencies can be found [here](https://github.com/GeekMuch/notifyGradeSTADS/blob/master/requirements.txt)
-  ```pip install -r /path/to/requirements.txt```
+  - To install the requirements:
+    ```pip install -r /path/to/requirements.txt```
