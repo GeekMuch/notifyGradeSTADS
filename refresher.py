@@ -4,10 +4,20 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from tqdm import tqdm
 
-# Configure to your needs
+# Configure your preferred browser. 
+# REMEBER TO DOWNLOAD THE BROWSER DRIVER LINK BELOW
+# https://www.selenium.dev/documentation/en/webdriver/driver_requirements/
 driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
+
+# Link for the login page
 url = 'https://sb.aau.dk/sb-ad/sb/index.jsp'
+
+# Link for STADS results
 resLink = 'https://sb.aau.dk/sb-ad/sb/resultater/studresultater.jsp'
+
+# YouTube link for the video 
+ytVideo = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+
 # Global variables 
 refreshCounter = 0
 oldCounter = 0
@@ -31,7 +41,7 @@ def checker(counter, driver, refreshCounter):
     timer = 420
 
     if counter > oldCounter:
-        driver.get('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        driver.get(ytVideo)
         w = driver.find_element_by_xpath("//*[@class='ytp-large-play-button ytp-button']")
         w.click()
         print("\n\n[+] GRADE IS UP !\n\n")
@@ -73,8 +83,6 @@ def loginSite(url):
     
     oldCount(url)
     studResultater(url)
-
-
 
 def studResultater(url):
     global refreshCounter
