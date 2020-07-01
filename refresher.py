@@ -71,6 +71,18 @@ def countGrades(GradeList):
 
     return counter
     
+def studResultater(url):
+    global refreshCounter
+    global counter
+    counter = 0
+    kk = driver.get(resLink) # place
+    a =  driver.find_elements_by_xpath('//*[@id="resultTable"]/tbody/tr[*]')
+    
+    countGrades(a)
+
+    refreshCounter += 1
+    checker(counter, driver, refreshCounter)
+
 def loginSite(url):
     driver.get(url)
     
@@ -83,18 +95,6 @@ def loginSite(url):
     
     oldCount(url)
     studResultater(url)
-
-def studResultater(url):
-    global refreshCounter
-    global counter
-    counter = 0
-    kk = driver.get(resLink) # place
-    a =  driver.find_elements_by_xpath('//*[@id="resultTable"]/tbody/tr[*]')
-    
-    countGrades(a)
-
-    refreshCounter += 1
-    checker(counter, driver, refreshCounter)
 
 if __name__ == "__main__":
     loginSite(url)
