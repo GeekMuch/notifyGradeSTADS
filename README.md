@@ -9,7 +9,7 @@ The notifier is written in Python 3.
 
 - [Any version of Python3](https://www.python.org/downloads/)
 - pip package management system
-- Selenium WebDriver(Browser emulator) can be found [here](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/)
+- Selenium WebDrivers can be found [here](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/)
 - Required dependencies can be found [here](https://github.com/GeekMuch/notifyGradeSTADS/blob/master/requirements.txt)
   - To install the requirements use:  
     ```pip3 install -r /path/to/requirements.txt```
