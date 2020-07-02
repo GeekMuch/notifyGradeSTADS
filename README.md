@@ -21,5 +21,5 @@ Lazy ? here you go!
 Clone and change directory  
 ```git clone https://github.com/GeekMuch/notifyGradeSTADS.git && cd notifyGradeSTADS ```  
   
-run   
+and run script   
 ```python3 refresher.py```
