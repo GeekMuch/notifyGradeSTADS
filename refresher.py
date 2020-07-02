@@ -1,6 +1,9 @@
 import os
+import sys
 import time
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from tqdm import tqdm
 
@@ -17,6 +20,10 @@ resLink = 'https://sb.aau.dk/sb-ad/sb/resultater/studresultater.jsp'
 
 # YouTube link for the video 
 ytVideo = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+
+# Login information
+username = 'BRUGERNAVN_HER'
+password = 'ADGANGSKODE_HER'
 
 # Global variables 
 refreshCounter = 0
@@ -87,14 +94,20 @@ def loginSite(url):
     driver.get(url)
     
     u = driver.find_element_by_name('brugernavn')
-    u.send_keys('USERNAME_HERE') # your STADS username 
+    u.send_keys(username) # your STADS username 
     
     p = driver.find_element_by_name('adgangskode')
-    p.send_keys(encoder()) # your STADS password
+    p.send_keys(password) # your STADS password
     p.send_keys(Keys.RETURN)
-    
-    oldCount(url)
-    studResultater(url)
+
+    error = driver.find_elements_by_class_name('ErrorText')
+
+    if 'Forkert' in error[0].text:
+        print('\n[x] Error in login \n')
+        sys.exit(0) 
+    else:
+        oldCount(url)
+        studResultater(url)
 
 if __name__ == "__main__":
     loginSite(url)
