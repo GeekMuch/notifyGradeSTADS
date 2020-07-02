@@ -16,8 +16,9 @@ The notifier is written in Python 3.
 
 ## Runnig the script
 To run the script change the directory to repo and run the ```refresher.py```.  
-Lazy ? here you go!
-Clone and cd  
+Lazy ? here you go!  
+  
+Clone and change directory  
 ```git clone https://github.com/GeekMuch/notifyGradeSTADS.git && cd notifyGradeSTADS ```  
-and run!  
+and run   
 ```python3 refresher.py```
