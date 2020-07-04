@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from tqdm import tqdm
 
 # Configure your preferred browsers path. 
-# REMEBER TO DOWNLOAD THE BROWSER DRIVER, LINK BELOW
+# REMEMBER TO DOWNLOAD THE BROWSER DRIVER, LINK BELOW
 # https://www.selenium.dev/documentation/en/webdriver/driver_requirements/
 driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
 
